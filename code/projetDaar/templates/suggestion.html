@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<titre>Suggestion</titre>
+
+</head>
+<body>
+
+<div>
+<h1>Le mot "{{resp}}" recherché se trouve dans  : </h1>
+<ul>
+
+    {% for titre, auteur, Id in list %}
+    <li><a href="https://www.gutenberg.org/ebooks/{{Id}}">{{titre}} <b>BY</b> {{auteur}} </a></li>
+    {% endfor %}
+
+</ul>
+
+<h1>Voir aussi >>> </h1>
+<ul>
+
+    {% for titre, auteur, Id in suggestions %}
+    <li><a href="https://www.gutenberg.org/ebooks/{{Id}}">{{titre}} <b>BY</b> {{auteur}} </a></li>
+    {% endfor %}
+
+</ul>
+
+</body>
+</html> 

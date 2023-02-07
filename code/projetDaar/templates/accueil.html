@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <style>
+
+  body {
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Flepetitjournal.com%2Fvivre-a-varsovie%2Flecture-7-livres-incontournables-pour-mieux-comprendre-la-pologne-163351&psig=AOvVaw0s1DP0eulWagM8CTDvjv3U&ust=1674893829321000&source=images&cd=vfe&ved=2ahUKEwi4oJHvp-f8AhV6VaQEHSuiBQEQr4kDegUIARC2Ags");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  }
+
+
+  input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 50px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 250px auto;
+  width: 300px;
+}
+
+#c1,#c2,#c3 {
+margin-left : 50px;
+}
+</style>
+    </style>
+    <body>
+      <div>
+        <form method="post" action="{% url 'search' %}" >
+          {% csrf_token %}
+          <input type="checkbox" id="c1" name="advenced" value="on">
+          <label for="c1" > recherche avec RegEx</label><br>
+
+          <input type="checkbox" id="c2" name="scorebox" value="on">
+          <label for="c2" > Recherche par nombre de match</label><br>
+
+          <input type="checkbox" id="c3" name="crankbox" value="on">
+          <label for="c3"> Search par pertinence</label><br>
+
+          <input type="text" name="content" >
+          <input type="submit" value="Rechercher">
+        </form>
+      </div>
+    </body>
+</html>

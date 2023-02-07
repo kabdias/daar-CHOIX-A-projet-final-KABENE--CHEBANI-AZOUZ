@@ -1,0 +1,6 @@
+django
+nltk
+regex
+pyvis
+networkx
+elasticsearch
